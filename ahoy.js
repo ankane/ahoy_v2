@@ -82,6 +82,8 @@
       // referrer
       if (document.referrer.length > 0) {
         data.referrer = document.referrer;
+        var r = /:\/\/(.[^/]+)/;
+        data.referring_domain = document.referrer.match(r)[1];
       }
 
       // utm params
