@@ -22,7 +22,7 @@
 
   // http://stackoverflow.com/a/15050887/1177228
   function mobile() {
-    return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
+    return ('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch) || false;
   }
 
   // query parameters
